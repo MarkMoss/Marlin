@@ -470,7 +470,8 @@
   #endif
 
   #if MOTHERBOARD == 33 || MOTHERBOARD == 35 || MOTHERBOARD == 67
-    #define FAN_PIN            9 // (Sprinter config)
+    //#define FAN_PIN            9 /#
+    #define FAN_PIN             10 //Temporary work-around for bad FET on pin 10.
   #else
     #define FAN_PIN            4 // IO pin. Buffer needed
   #endif
@@ -494,7 +495,8 @@
   #if MOTHERBOARD == 35
     #define HEATER_0_PIN       8
   #else
-    #define HEATER_0_PIN       10   // EXTRUDER 1
+    //#define HEATER_0_PIN       10   // EXTRUDER 1
+    #define HEATER_0_PIN       9 //Temporary work-around for bad FET on pin 10.
   #endif
 
   #if MOTHERBOARD == 33 || MOTHERBOARD == 67
